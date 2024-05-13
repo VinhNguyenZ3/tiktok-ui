@@ -6,10 +6,13 @@ import styles from "./Header.module.scss";
 import images from "~/assets/images/logo.svg";
 import { Wrapper as PopperWrapper } from "~/components/Popper";
 
+import Button from "~/components/Button";
+
 import {
   faCircleXmark,
   faSpinner,
   faMagnifyingGlass,
+  faSignIn,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import AccountItem from "~/components/AccountItem";
@@ -63,7 +66,10 @@ function Header() {
           </div>
         </Tippy>
 
-        <div className={cx("actions")}></div>
+        <div className={cx("actions")}>
+          <Button text>Upload</Button>
+          <Button primary>Login</Button>
+        </div>
       </div>
     </header>
   );
